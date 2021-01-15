@@ -1,51 +1,64 @@
-""" 
-A basic pygame template
-"""
- 
-import pygame
- 
-# Define some colors
-BLACK    = (   0,   0,   0)
-WHITE    = ( 255, 255, 255)
-GREEN    = (   0, 255,   0)
-RED      = ( 255,   0,   0)
- 
-pygame.init()
+import random
+
+rounds = 0
+points = 0
+
+print("---Welcome to the Jeopardy Game of ICS201a---")
+print("There are :200: :400: :600: :800: :1000: point options.\nYou will only get 10 questions to gain the most amount of points. \nPlease select the letter corresponding to your answer. \nGoal to beat is 10000! points")
+
+
+while rounds <  10:
+  rounds += 1
   
-# Set the width and height of the screen [width, height]
-size = (700, 500)
-screen = pygame.display.set_mode(size)
- 
-pygame.display.set_caption("My Game")
- 
-#Loop until the user clicks the close button.
-done = False
- 
-# Used to manage how fast the screen updates
-clock = pygame.time.Clock()
- 
-# -------- Main Program Loop -----------
-while not done:
-    # --- Main event loop
-    for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-            done = True # Flag that we are done so we exit this loop
-  
-    # --- Game logic should go here
- 
-    # --- Drawing code should go here
-     
-    # First, clear the screen to white or whatever background colour. 
-    # Don't put other drawing commands above this, or they will be erased with this command.
-    screen.fill(WHITE)
-     
-    # --- Go ahead and update the screen with what we've drawn.
-    pygame.display.flip()
- 
-    # --- Limit to 60 frames per second
-    clock.tick(60)
-     
-# Close the window and quit.
-# If you forget this line, the program will 'hang'
-# on exit if running from IDLE.
-pygame.quit()
+  option = int(input("\nWhich question will you choose?: "))
+
+  question_200 = random.randint(1, 3)
+  question_400 = random.randint(1, 3)
+  question_600 = random.randint(1, 3)
+  question_800 = random.randint(1, 3)
+  question_1000 = random.randint(1, 3)
+
+  if option == 200:
+    print("You picked a 200 point question.")
+
+    if question_200 == 1:
+      print("What does CPU stand for? ")
+      print("A.) Central Processing Unit \nB.) Computer Processing Unit \nC.) Central Processing Utility")
+      answer1 = input("Answer: ")
+      answer1 = answer1.lower()
+
+      if answer1 == "a":
+        print("CORRECT")
+        points += 200
+        print("Score: ",points)
+      else:
+        print("INCORRECT")
+        print("Score: ",points)
+    elif question_200 == 2:
+      print("What does GPU stand for? ")
+      print("A.) Global Production Unit \nB.) Graphics Processer \nC.) Graphics Processing Unit")
+      answer2 = input("Answer: ")
+      answer2 = answer2.lower()
+
+      if answer2 == "c":
+        print("CORRECT")
+        points += 200
+        print("Score: ",points)
+      else:
+        print("INCORRECT")
+        print("Score: ",points)
+
+    elif question_200 == 3:
+      print("What is an example of an input device?")
+    
+      print("A.) Headset \nB.) Monitor \nC.) Mouse")
+      answer3 = input("Answer: ")
+      answer3 = answer3.lower()
+
+      if answer3 == "c":
+        print("CORRECT")
+        points += 200
+        print("Score: ",points)
+      else:
+        print("INCORRECT")
+        print("Score: ",points)
