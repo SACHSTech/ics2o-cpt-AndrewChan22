@@ -29,6 +29,7 @@ while True:
   if answer == "y":
     print("\nYou walk into the first room")
     break
+
   else:
     print("\nYou are not ready.")
 
@@ -39,6 +40,7 @@ print("counter to complete the puzzles in the first counter!")
 
 # First question
 print("\nWhat does Ransomware do?")
+
 print("\nA.) Disguises itself as legitimate software \nB.) Threatens to publish the victim's data or  block access to it  \nC.) Aims to gather information about a person or organization \nD.) Automatically generates advertisements")
 
 # Count the amount of tries
@@ -56,9 +58,11 @@ while True:
     print("\nPuzzle Piece Found!! Letter found: B")
     print("Well done. You completed this puzzle in ", round1, " tries.")
     break
+
   # Incorrect - loop
   elif answer == "a" or answer == "c" or answer == "d":
     print("\n---Incorrect---")
+
   else:
     print("\nPlease enter a valid option.")
 
@@ -75,6 +79,7 @@ else:
 print("\nAnother puzzle is on the wall")
 
 print("\nWhat is the most crucial component to any computer system?")
+
 print("\nA.) Power Supply \nB.) RAM  \nC.) Hard Drive \nD.) CPU ")
 
 # Count the amount of tries
@@ -90,8 +95,10 @@ while True:
     print("\nPuzzle Piece Found!! Letter found: R")
     print("Well done. You completed this puzzle in ", round2, " tries.")
     break
+
   elif answer == "b" or answer == "c" or answer == "d":
     print("\n---Incorrect---")
+
   else:
     print("\nPlease enter a valid option.")
 
@@ -104,11 +111,13 @@ else:
 print("\nOne question remains, written on the ground")
 
 print("\nWhat is an example of an input device?")
+
 print("\nA.) Monitor \nB.) Speakers  \nC.) Mouse \nD.) Headset ")
 
 round3 = 0
 while True:
   round3 += 1
+
   answer = input("\nAnswer: ")
   answer = answer.lower()
 
@@ -116,8 +125,10 @@ while True:
     print("\nPuzzle Piece Found!! Letter found: I")
     print("Well done. You completed this puzzle in ", round3, " tries.")
     break
+
   elif answer == "b" or answer == "c" or answer == "d":
     print("\n---Incorrect---")
+
   else:
     print("\nPlease enter a valid option.")
 
@@ -132,14 +143,17 @@ print("First Tries Score: ", counter)
 
 # Asks user for key
 print("\nTo advance to the next room, please enter the key.")
+
 # Loop until key is entered correctly
 while True:
 
   answer = input("\nAnswer: ")
   answer = answer.lower()
+
   if answer == "bri":
     print("Well done. You advance to the next room.")
     break
+    
   else:
     print("\nYOU ARE RUNNING OUT OF TIME")
 
@@ -150,12 +164,15 @@ time.sleep(1.5)
 # Loop until user chooses either 1 or 2
 while True:
   option = input("What do you do \n1. Wake it up and attack it \n2. counter to walk around \nAnswer:")
+
   if option == "1":
     print("------------------------------------------------------------")
     print("\nYou quickly sprint to the creature, seeing as it is weak while sleeping, you begin punching it with your hands")
     time.sleep(1.5)
+
     print("You quickly realize that are you are doing next to nothing, and the creature wakes up.")
     time.sleep(1.5)
+
     print("\nIt rises and it towers over you \nYou see that it is a computer virus!")
     time.sleep(1.5)
     break
@@ -164,16 +181,21 @@ while True:
     print("------------------------------------------------------------")
     print("You attempt to sneak around this creature, but you clumsily fall over and make a lound noise")
     time.sleep(1.5)
+
     print("\nBy attempting to sneak around it, you accidentally woke up the creature.")
+
     print("\nIt rises and it towers over you \nYou see that it is a computer virus!")
     break
+
   else:
     print("Invalid Answer")
 
 print("Now that it is awake it looks at you, ready to attack.")
 time.sleep(1.5)
+
 print("A sword appears in front of you!")
 time.sleep(1.5)
+
 print("\nYou now have three options")
 
 # Boss Battle (Room 2)
@@ -234,6 +256,7 @@ time.sleep(1.5)
 # Key to advance
 print("\nYou receive more parts of the code")
 time.sleep(2)
+
 print("\nSo far you have: \nB \nR \nI \n\nYour new parts of the code: \nS \nK")
 time.sleep(3)
 
@@ -487,12 +510,13 @@ print("\nSo far you have: \nB \nR \nI \nS \nK")
 print("\n\nPut all the letters together to form the code: ")
 
 while True:
-
   answer = input("\nAnswer: ")
   answer = answer.lower()
+
   if answer == "brisket":
     print("\nWell done. You advance to the next room.")
     break
+
   else:
     print("\nYOU ARE RUNNING OUT OF TIME")
 
@@ -511,8 +535,10 @@ power_supply = 0
 # Loop until user has gone through each computer part at least once
 while cpu == 0 or gpu == 0 or ram == 0  or hard_drive == 0  or motherboard == 0  or power_supply == 0:
   time.sleep(1.5)
+
   answer = input("\nWhat would you like you learn about? \n\n•CPU \n•GPU \n•RAM \n•Hard Drive \n•Motherboard \n•Power Supply\n\nAnswer: ")
   answer = answer.lower()
+
   # For each if statement, update the corresponding variable
   if answer == "cpu":
     cpu += 1
@@ -525,6 +551,7 @@ while cpu == 0 or gpu == 0 or ram == 0  or hard_drive == 0  or motherboard == 0 
   elif answer == "ram":
     ram += 1
     print("\nRandom-access memory is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code.")
+
   elif answer == "hard drive":
     hard_drive +=1
     print("\nA high-capacity, self-contained storage device containing a read-write mechanism plus one or more hard disks, inside a sealed unit.")
@@ -536,6 +563,7 @@ while cpu == 0 or gpu == 0 or ram == 0  or hard_drive == 0  or motherboard == 0 
   elif answer == "power supply":
     power_supply +=1
     print("\nAn electrical device that supplies electric power to an electrical load, such as powering a PC")
+    
   else:
     print("\nInvalid Answer")
 
